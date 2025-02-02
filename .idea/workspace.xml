@@ -4,31 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Main) : Change Search Pannel &amp; change some Interfaces">
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Main) : Add Reservation Banner">
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/screens/HomeScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Banner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BlogList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PopularCities.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SearchSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/+not-found.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Collapsible.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ExternalLink.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HapticTab.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HelloWave.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ParallaxScrollView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ThemedText.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ThemedView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/__tests__/ThemedText-test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/__tests__/__snapshots__/ThemedText-test.tsx.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/IconSymbol.ios.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/IconSymbol.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/TabBarBackground.ios.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/TabBarBackground.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sjsh1623"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sjsh1623&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sjsh1623/Planiary.git",
-    "accountId": "6dbbe7e8-1f3c-4e02-bac1-f6e8a56ce8eb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sjsh1623/Planiary.git&quot;,
+    &quot;accountId&quot;: &quot;6dbbe7e8-1f3c-4e02-bac1-f6e8a56ce8eb&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -58,18 +89,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="/private/var/folders/7_/w_gfrs9j4077ptqt45hwshf80000gn/T/qodana_output/qodana.sarif.json" />
-        <option name="reportGuid" value="556bc376-ef65-4c06-8bb1-3fceeae73b65" />
-        <option name="reportName" value="Planiary/qodana/2025-02-01" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="/private/var/folders/7_/w_gfrs9j4077ptqt45hwshf80000gn/T/qodana_output/qodana.sarif.json" reportGuid="556bc376-ef65-4c06-8bb1-3fceeae73b65" reportId="Planiary/qodana/2025-02-01" />
@@ -104,6 +123,8 @@
       <workItem from="1738294852148" duration="7855000" />
       <workItem from="1738302752806" duration="1379000" />
       <workItem from="1738321751112" duration="20393000" />
+      <workItem from="1738494886719" duration="105000" />
+      <workItem from="1738495000456" duration="4131000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
