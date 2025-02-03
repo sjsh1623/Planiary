@@ -4,34 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Main) : Add Reservation Banner">
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/screens/HomeScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Banner.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/BlogList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PopularCities.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SearchSection.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="refactor (Main) : Refactor All Logics, Change some User Interfaces">
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/explore.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/+not-found.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/screens/HomeScreen.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Collapsible.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ExternalLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HapticTab.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HelloWave.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ParallaxScrollView.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ThemedText.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ThemedView.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/__tests__/ThemedText-test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/__tests__/__snapshots__/ThemedText-test.tsx.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/IconSymbol.ios.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/IconSymbol.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/TabBarBackground.ios.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/TabBarBackground.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +70,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="/private/var/folders/7_/w_gfrs9j4077ptqt45hwshf80000gn/T/qodana_output/qodana.sarif.json" reportGuid="556bc376-ef65-4c06-8bb1-3fceeae73b65" reportId="Planiary/qodana/2025-02-01" />
-    </option>
-  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -124,7 +100,10 @@
       <workItem from="1738302752806" duration="1379000" />
       <workItem from="1738321751112" duration="20393000" />
       <workItem from="1738494886719" duration="105000" />
-      <workItem from="1738495000456" duration="4131000" />
+      <workItem from="1738495000456" duration="5163000" />
+      <workItem from="1738551455966" duration="87000" />
+      <workItem from="1738587675600" duration="1017000" />
+      <workItem from="1738588850551" duration="5009000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
@@ -142,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738420850370</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor (Main) : Refactor All Logics, Change some User Interfaces">
+      <option name="closed" value="true" />
+      <created>1738503661180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738503661180</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat (Main) : Add Main Page &amp; fix some init issues" />
     <MESSAGE value="feat (Main) : Change Search Pannel &amp; change some Interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (Main) : Change Search Pannel &amp; change some Interfaces" />
+    <MESSAGE value="refactor (Main) : Refactor All Logics, Change some User Interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor (Main) : Refactor All Logics, Change some User Interfaces" />
   </component>
 </project>

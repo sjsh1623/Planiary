@@ -4,7 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import {useEffect} from "react";
 import "react-native-reanimated";
 import {Slot} from "expo-router"; // ✅ Slot 사용하여 자동 라우팅
-import {SafeAreaView, ScrollView, View} from "react-native";
+import {View} from "react-native";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
