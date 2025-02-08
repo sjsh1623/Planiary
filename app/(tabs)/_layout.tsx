@@ -18,6 +18,7 @@ export default function TabLayout() {
                 name="screens/SelectCityScreen"
                 options={{title: "도시 선택", headerShown: false, tabBarShowLabel: false,}}
             />
+
         </Tabs>
     );
 }

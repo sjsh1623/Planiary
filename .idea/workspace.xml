@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="refactor (Main) : Refactor All Logics, Change some User Interfaces">
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (travel-select) : Create New page for selecting travel locations">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/context/DrawerContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/screens/HomeScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -72,6 +76,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/(drawer)" />
+      <recent name="$PROJECT_DIR$/app/(auth)/screens" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -103,7 +109,9 @@
       <workItem from="1738495000456" duration="5163000" />
       <workItem from="1738551455966" duration="87000" />
       <workItem from="1738587675600" duration="1017000" />
-      <workItem from="1738588850551" duration="5009000" />
+      <workItem from="1738588850551" duration="5110000" />
+      <workItem from="1738729575172" duration="1166000" />
+      <workItem from="1738982470512" duration="10216000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
@@ -129,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738503661180</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat (travel-select) : Create New page for selecting travel locations">
+      <option name="closed" value="true" />
+      <created>1738594611605</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738594611605</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,9 +163,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat (Main) : Add Main Page &amp; fix some init issues" />
     <MESSAGE value="feat (Main) : Change Search Pannel &amp; change some Interfaces" />
     <MESSAGE value="refactor (Main) : Refactor All Logics, Change some User Interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor (Main) : Refactor All Logics, Change some User Interfaces" />
+    <MESSAGE value="feat (travel-select) : Create New page for selecting travel locations" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (travel-select) : Create New page for selecting travel locations" />
   </component>
 </project>

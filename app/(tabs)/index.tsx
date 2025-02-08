@@ -8,6 +8,7 @@ import BlogList from "@/components/BlogList";
 import Banner from "@/components/Banner";
 import {HEADER_HEIGHT, SCREEN_WIDTH, ANIMATION_DURATION} from "./constants/homeConstants";
 import {dividerStyle} from "./styles/homeStyles";
+import {useRouter} from "expo-router";
 
 /**
  * HomeScreen
@@ -55,7 +56,7 @@ const index = () => {
     return (
         <>
             {/* 상단 헤더 */}
-            <Header/>
+            <Header/> {/* ✅ navigation 대신 router 사용 */}
             {/* 스크롤 가능한 메인 콘텐츠 영역 */}
             <Animated.ScrollView
                 style={{paddingTop: HEADER_HEIGHT, backgroundColor: "white"}}

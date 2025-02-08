@@ -147,13 +147,13 @@ const SelectCityScreen = () => {
                             return (
                                 <VStack key={city} style={styles.selectedCityItem}>
                                     {/* 🔹 여행지 이미지 */}
-                                    <Image source={{ uri: cityData?.image }} style={styles.selectedCityImage} />
+                                    <Image source={{uri: cityData?.image}} style={styles.selectedCityImage}/>
 
                                     {/* 🔹 도시명과 삭제 버튼 */}
                                     <HStack style={styles.selectedCityNameContainer}>
                                         <Text style={styles.selectedCityText}>{city}</Text>
                                         <Pressable onPress={() => handleSelectCity(city)}>
-                                            <Icon as={Ionicons} name="close-circle" size="sm" color="gray" />
+                                            <Icon as={Ionicons} name="close-circle" size="sm" color="gray"/>
                                         </Pressable>
                                     </HStack>
                                 </VStack>
