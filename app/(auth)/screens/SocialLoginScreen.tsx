@@ -45,7 +45,7 @@ const SocialLoginScreen = () => {
                     </HStack>
                 </Button>
 
-                <Button style={[styles.socialButton, styles.email]} onPress={() => router.push('/screens/TestScreen')}>
+                <Button style={[styles.socialButton, styles.email]} onPress={() => router.push('/screens/EmailLoginScreen')}>
                     <HStack style={styles.buttonContent}>
                         <Icon as={FontAwesome} name="envelope" size="md" color="blue"/>
                         <Text style={styles.emailText}>이메일로 시작하기</Text>

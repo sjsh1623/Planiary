@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Navigation) : Add Auth Navigations">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/TermsAgreementScreen.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Agreement) : Add Policy Agreement Page">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/EmailLoginScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" afterDir="false" />
@@ -172,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739102253927</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat (Agreement) : Add Policy Agreement Page">
+      <option name="closed" value="true" />
+      <created>1739106290489</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739106290489</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +208,7 @@
     <MESSAGE value="feat (travel-profile) : Profile Popup (Need Refactor)" />
     <MESSAGE value="refactor (Cities Page) : Refactor cites screen&#10;&#10;+ All component needs to have directories therefore I can sort them properly" />
     <MESSAGE value="feat (Navigation) : Add Auth Navigations" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (Navigation) : Add Auth Navigations" />
+    <MESSAGE value="feat (Agreement) : Add Policy Agreement Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (Agreement) : Add Policy Agreement Page" />
   </component>
 </project>
