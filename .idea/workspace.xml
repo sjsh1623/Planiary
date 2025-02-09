@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (travel-select) : Create New page for selecting travel locations">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/context/DrawerContext.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (travel-profile) : Profile Popup (Need Refactor)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BlogList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BlogList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +104,8 @@
       <workItem from="1738587675600" duration="1017000" />
       <workItem from="1738588850551" duration="5110000" />
       <workItem from="1738729575172" duration="1166000" />
-      <workItem from="1738982470512" duration="10216000" />
+      <workItem from="1738982470512" duration="10272000" />
+      <workItem from="1739065822738" duration="3702000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
@@ -145,7 +139,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738594611605</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat (travel-screen) : Login Page / Profile DrawerViewer 작업">
+      <option name="closed" value="true" />
+      <created>1739026977831</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739026977831</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat (travel-profile) : Profile Popup (Need Refactor)">
+      <option name="closed" value="true" />
+      <created>1739073257087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739073257087</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +179,8 @@
     <MESSAGE value="feat (Main) : Change Search Pannel &amp; change some Interfaces" />
     <MESSAGE value="refactor (Main) : Refactor All Logics, Change some User Interfaces" />
     <MESSAGE value="feat (travel-select) : Create New page for selecting travel locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (travel-select) : Create New page for selecting travel locations" />
+    <MESSAGE value="feat (travel-screen) : Login Page / Profile DrawerViewer 작업" />
+    <MESSAGE value="feat (travel-profile) : Profile Popup (Need Refactor)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (travel-profile) : Profile Popup (Need Refactor)" />
   </component>
 </project>

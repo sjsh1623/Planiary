@@ -117,7 +117,7 @@ export const popularCitiesStyles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontWeight: "bold",
-        alignSelf: "center",
+        paddingHorizontal: HORIZONTAL_PADDING,
     },
     scrollContainer: {
         marginTop: 12,

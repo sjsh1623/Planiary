@@ -2,10 +2,10 @@
 
 import React from "react";
 import {Image, Pressable} from "react-native";
-import {HStack} from "@/components/ui/hstack"; 
-import {VStack} from "@/components/ui/vstack"; 
-import {Text} from "@/components/ui/text"; 
-import {Box} from "@/components/ui/box"; 
+import {HStack} from "@/components/ui/hstack";
+import {VStack} from "@/components/ui/vstack";
+import {Text} from "@/components/ui/text";
+import {Box} from "@/components/ui/box";
 import {blogListStyles} from "@/app/(tabs)/styles/homeStyles";
 import {blogPosts} from "@/app/(tabs)/constants/homeConstants";
 
@@ -18,7 +18,7 @@ const BlogList = () => {
         <VStack style={blogListStyles.container}>
             {/* 리스트 헤더: 타이틀 및 '더보기' 버튼 */}
             <HStack style={blogListStyles.header}>
-                <Text style={blogListStyles.headerTitle}>트리플 매거진</Text>
+                <Text style={blogListStyles.headerTitle}>Planiary 매거진</Text>
                 <Pressable>
                     <Text style={blogListStyles.headerButtonText}>더보기</Text>
                 </Pressable>

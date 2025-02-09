@@ -69,7 +69,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
                         {[
                             {label: "내 예약"},
                             {label: "쿠폰함", badge: "19"},
-                            {label: "트리플 캐시", badge: "0"},
+                            {label: "Planiary 캐시", badge: "0"},
                             {label: "여행자 클럽", highlight: "LEVEL 0 OP"},
                             {label: "오프라인 가이드"}
                         ].map((item, index) => (
@@ -93,8 +93,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
 
                     {/* ✅ 하단 배너 */}
                     <Box style={styles.banner}>
-                        <Text style={styles.bannerText}>트리플 200% 사용 설명서</Text>
-                        <Text style={styles.bannerSubText}>알고 쓰면 더 매력적인 트리플</Text>
+                        <Text style={styles.bannerText}>Planiary 200% 사용 설명서</Text>
+                        <Text style={styles.bannerSubText}>알고 쓰면 더 매력적인 Planiary</Text>
                     </Box>
                 </Animated.View>
             </View>
