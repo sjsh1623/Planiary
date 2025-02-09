@@ -1,4 +1,4 @@
-// app/tabs/styles/homeStyles.ts
+// app/(tabs)/styles/homeStyles.ts
 
 import {StyleSheet} from "react-native";
 import {

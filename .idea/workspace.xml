@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (travel-profile) : Profile Popup (Need Refactor)">
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/constants/cityConstants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/styles/cityStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BottomSelection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CityHorizontalFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CityItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SmallSearchSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TabNavigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BlogList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BlogList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LargeSearchSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -69,6 +78,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/(tabs)/constants" />
       <recent name="$PROJECT_DIR$/app/(drawer)" />
       <recent name="$PROJECT_DIR$/app/(auth)/screens" />
       <recent name="$PROJECT_DIR$" />

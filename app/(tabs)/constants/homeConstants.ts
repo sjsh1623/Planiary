@@ -1,4 +1,4 @@
-// app/tabs/constants/homeConstants.ts
+// app/(tabs)/constants/homeConstants.ts
 
 import { Dimensions } from "react-native";
 

@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {Animated, NativeScrollEvent, NativeSyntheticEvent, ScrollView} from "react-native";
 import {Box} from "@/components/ui/box";
 import Header from "@/components/Header";
-import SearchSection from "@/components/SearchSection";
+import LargeSearchSection from "@/components/LargeSearchSection";
 import PopularCities from "@/components/PopularCities";
 import BlogList from "@/components/BlogList";
 import Banner from "@/components/Banner";
@@ -64,7 +64,7 @@ const index = () => {
                 onScroll={handleScroll}
             >
                 {/* 검색창 및 카테고리 섹션 */}
-                <SearchSection/>
+                <LargeSearchSection/>
                 {/* 구분선 */}
                 <Box style={dividerStyle.divider}/>
                 {/* 인기 도시 리스트 */}

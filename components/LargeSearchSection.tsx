@@ -1,19 +1,19 @@
-// app/components/ui/SearchSection.tsx
+// app/components/ui/LargeSearchSection.tsx
 
 import React from "react";
 import { Image, Pressable } from "react-native";
-import {HStack} from "@/components/ui/hstack"; 
-import {Box} from "@/components/ui/box"; 
-import {Text} from "@/components/ui/text"; 
+import {HStack} from "@/components/ui/hstack";
+import {Box} from "@/components/ui/box";
+import {Text} from "@/components/ui/text";
 import { Input, InputField } from "@/components/ui/input";
 import { searchSectionStyles } from "@/app/(tabs)/styles/homeStyles";
 import { categories } from "@/app/(tabs)/constants/homeConstants";
 
 /**
- * SearchSection 컴포넌트
+ * LargeSearchSection 컴포넌트
  * - 검색창과 카테고리 목록을 렌더링
  */
-const SearchSection = () => {
+const LargeSearchSection = () => {
     return (
         <Box style={searchSectionStyles.container}>
             {/* 검색 입력 필드 */}
@@ -33,4 +33,4 @@ const SearchSection = () => {
     );
 };
 
-export default SearchSection;
+export default LargeSearchSection;
