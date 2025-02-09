@@ -33,7 +33,9 @@ export default function RootLayout() {
         <GestureHandlerRootView style={{flex: 1}}>
             <View style={{flex: 1}}> {/* 원하는 패딩값 지정 */}
                 <DrawerProvider>
-                    <Slot/> {/* ✅ SafeAreaView 내부에서 앱 전체를 감싸도록 설정 */}
+                    <View style={{flex: 1, paddingTop: 40}}>
+                        <Slot/>
+                    </View>
                     <DrawerConsumer/>
                 </DrawerProvider>
             </View>
@@ -45,6 +47,5 @@ export default function RootLayout() {
 // ✅ Drawer 상태를 읽고 ProfileDrawer를 표시하는 컴포넌트
 const DrawerConsumer = () => {
     const {isDrawerOpen, closeDrawer} = useDrawer();
-
     return isDrawerOpen ? <ProfileDrawer isVisible={isDrawerOpen} onClose={closeDrawer}/> : null;
 };
