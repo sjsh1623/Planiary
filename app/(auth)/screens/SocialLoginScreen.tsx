@@ -53,7 +53,7 @@ const SocialLoginScreen = () => {
                 </Button>
 
                 {/* 🔹 회원가입 버튼 (마지막 버튼 다음에 배치) */}
-                <Pressable style={styles.signUp} onPress={() => console.log("회원가입")}>
+                <Pressable style={styles.signUp} onPress={() => router.push('/screens/TermsAgreementScreen')}>
                     <Text style={styles.signUpText}>회원가입</Text>
                 </Pressable>
             </VStack>
