@@ -34,7 +34,7 @@ export const blogPosts = [
         image: "https://picsum.photos/800/800",
         title: "여럿이서 즐겁게, 추억 쌓기 좋은 이곳 📸",
         description: "맛과 멋이 있는 이 도시로!",
-        source: "Planiary",
+        source: "tripmory",
         date: "1월 5주차",
     },
     {
@@ -42,7 +42,7 @@ export const blogPosts = [
         image: "https://picsum.photos/800/800",
         title: "지친 일상을 떠나 바다로 🌊",
         description: "힐링이 필요할 때 떠나는 여행",
-        source: "Planiary",
+        source: "tripmory",
         date: "2월 1주차",
     },
     {
@@ -50,7 +50,7 @@ export const blogPosts = [
         image: "https://picsum.photos/800/800",
         title: "자연 속에서의 힐링 타임 🌲",
         description: "맑은 공기와 함께하는 산책",
-        source: "Planiary",
+        source: "tripmory",
         date: "2월 2주차",
     },
     {
@@ -58,7 +58,7 @@ export const blogPosts = [
         image: "https://picsum.photos/800/800",
         title: "자연 속에서의 힐링 타임 🌲",
         description: "맑은 공기와 함께하는 산책",
-        source: "Planiary",
+        source: "tripmory",
         date: "2월 2주차",
     },
     {
@@ -66,7 +66,7 @@ export const blogPosts = [
         image: "https://picsum.photos/800/600",
         title: "자연 속에서의 힐링 타임 🌲",
         description: "맑은 공기와 함께하는 산책",
-        source: "Planiary",
+        source: "tripmory",
         date: "2월 2주차",
     },
 ];

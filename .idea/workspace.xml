@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (travel-profile) : Profile Popup (Need Refactor)">
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/constants/cityConstants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/styles/cityStyles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/BottomSelection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CityHorizontalFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CityItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SmallSearchSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TabNavigation.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="refactor (Cities Page) : Refactor cites screen&#10;&#10;+ All component needs to have directories therefore I can sort them properly">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/TestScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(drawer)/ProfileDrawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/constants/homeConstants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/screens/SelectCityScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/styles/homeStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LargeSearchSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BlogList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BlogList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739073257087</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor (Cities Page) : Refactor cites screen&#10;&#10;+ All component needs to have directories therefore I can sort them properly">
+      <option name="closed" value="true" />
+      <created>1739087964128</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739087964128</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +198,7 @@
     <MESSAGE value="feat (travel-select) : Create New page for selecting travel locations" />
     <MESSAGE value="feat (travel-screen) : Login Page / Profile DrawerViewer 작업" />
     <MESSAGE value="feat (travel-profile) : Profile Popup (Need Refactor)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (travel-profile) : Profile Popup (Need Refactor)" />
+    <MESSAGE value="refactor (Cities Page) : Refactor cites screen&#10;&#10;+ All component needs to have directories therefore I can sort them properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor (Cities Page) : Refactor cites screen&#10;&#10;+ All component needs to have directories therefore I can sort them properly" />
   </component>
 </project>

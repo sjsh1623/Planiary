@@ -18,7 +18,7 @@ const BlogList = () => {
         <VStack style={blogListStyles.container}>
             {/* 리스트 헤더: 타이틀 및 '더보기' 버튼 */}
             <HStack style={blogListStyles.header}>
-                <Text style={blogListStyles.headerTitle}>Planiary 매거진</Text>
+                <Text style={blogListStyles.headerTitle}>tripmory 매거진</Text>
                 <Pressable>
                     <Text style={blogListStyles.headerButtonText}>더보기</Text>
                 </Pressable>

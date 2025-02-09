@@ -7,7 +7,7 @@ export default function TabLayout() {
         <Tabs screenOptions={{headerShown: false}}>
             {/* ✅ 홈 탭 (폴더 구조와 일치해야 함) */}
             <Tabs.Screen
-                name="index" // ✅ "screens/HomeScreen" 대신 "index" 사용
+                name="index"
                 options={{
                     title: "홈",
                     headerShown: false,
@@ -18,7 +18,6 @@ export default function TabLayout() {
                 name="screens/SelectCityScreen"
                 options={{title: "도시 선택", headerShown: false, tabBarShowLabel: false,}}
             />
-
         </Tabs>
     );
 }

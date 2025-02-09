@@ -3,7 +3,7 @@ import {useFonts} from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import {useEffect, useState} from "react";
 import "react-native-reanimated";
-import {Slot} from "expo-router"; // ✅ Slot 사용하여 자동 라우팅
+import {Slot, Stack} from "expo-router"; // ✅ Stack 사용
 import {View} from "react-native";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
 import ProfileDrawer from "@/app/(drawer)/ProfileDrawer";
@@ -17,8 +17,6 @@ export default function RootLayout() {
         SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     });
 
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false); // 🔥 드로어 상태 관리
-
     useEffect(() => {
         if (loaded) {
             SplashScreen.hideAsync();
@@ -31,18 +29,19 @@ export default function RootLayout() {
 
     return (
         <GestureHandlerRootView style={{flex: 1}}>
-            <View style={{flex: 1}}> {/* 원하는 패딩값 지정 */}
-                <DrawerProvider>
-                    <View style={{flex: 1, paddingTop: 40}}>
-                        <Slot/>
-                    </View>
-                    <DrawerConsumer/>
-                </DrawerProvider>
-            </View>
+            <DrawerProvider>
+                <View style={{flex: 1, paddingTop: 40}}>
+                    <Stack screenOptions={{headerShown: false}}>
+                        <Stack.Screen name="(tabs)"/>
+                        <Stack.Screen name="(auth)"/>
+                    </Stack>
+                </View>
+                {/* ✅ Profile Drawer 관리 */}
+                <DrawerConsumer/>
+            </DrawerProvider>
         </GestureHandlerRootView>
     );
 }
-
 
 // ✅ Drawer 상태를 읽고 ProfileDrawer를 표시하는 컴포넌트
 const DrawerConsumer = () => {

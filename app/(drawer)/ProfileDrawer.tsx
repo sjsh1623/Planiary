@@ -8,6 +8,7 @@ import {Icon} from "@/components/ui/icon";
 import {Ionicons} from "@expo/vector-icons";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
 import {useDrawer} from "@/app/context/DrawerContext";
+import {useRouter} from "expo-router";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const DRAWER_WIDTH = SCREEN_WIDTH * 0.7 // 화면의 80% 차지
@@ -17,6 +18,7 @@ interface ProfileDrawerProps {
 }
 
 const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
+    const router = useRouter();
     const {translateX, backdropOpacity, shouldRender} = useDrawer();
     if (!shouldRender) return null; // ✅ 애니메이션이 끝나면 제거
 
@@ -34,6 +36,16 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
                     </Pressable>
 
                     {/* 프로필 정보 */}
+                    <HStack style={styles.profileSection}>
+                        <Pressable style={{borderWidth: 1, paddingVertical: 14, paddingHorizontal: 20, borderRadius: 5}}
+                                   onPress={() => {
+                                       onClose()
+                                       router.push("/screens/SocialLoginScreen")
+                                   }}>
+                            <Text style={styles.userName}>로그인 / 회원가입</Text>
+                        </Pressable>
+                    </HStack>
+
                     <HStack style={styles.profileSection}>
                         <VStack>
                             <Text style={styles.userName}>라라라라</Text>
@@ -60,7 +72,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
                         </VStack>
                         <VStack style={styles.menuItem}>
                             <Icon as={Ionicons} name="document-text-outline" size="xl" color="black"/>
-                            <Text style={styles.menuText}>내 여행기</Text>
+                            <Text style={styles.menuText}>내 tripmory</Text>
                         </VStack>
                     </HStack>
 
@@ -69,9 +81,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
                         {[
                             {label: "내 예약"},
                             {label: "쿠폰함", badge: "19"},
-                            {label: "Planiary 캐시", badge: "0"},
                             {label: "여행자 클럽", highlight: "LEVEL 0 OP"},
-                            {label: "오프라인 가이드"}
                         ].map((item, index) => (
                             <Pressable key={index} style={styles.menuItemRow}>
                                 <Text style={styles.menuItemText}>{item.label}</Text>
@@ -93,8 +103,8 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
 
                     {/* ✅ 하단 배너 */}
                     <Box style={styles.banner}>
-                        <Text style={styles.bannerText}>Planiary 200% 사용 설명서</Text>
-                        <Text style={styles.bannerSubText}>알고 쓰면 더 매력적인 Planiary</Text>
+                        <Text style={styles.bannerText}>tripmory 200% 사용 설명서</Text>
+                        <Text style={styles.bannerSubText}>알고 쓰면 더 매력적인 tripmory</Text>
                     </Box>
                 </Animated.View>
             </View>
@@ -204,8 +214,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         paddingVertical: 15,
-        borderTopWidth: 1,
-        borderTopColor: "#E5E7EB",
     },
     notice: {
         fontSize: 16,

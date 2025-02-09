@@ -8,12 +8,14 @@ import {VStack} from "@/components/ui/vstack";
 import {Icon} from "@/components/ui/icon";
 import {Button} from "@/components/ui/button";
 import {Ionicons, FontAwesome} from "@expo/vector-icons";
+import {useRouter} from "expo-router";
 
-const SocialLoginScreen = ({navigation}) => {
+const SocialLoginScreen = () => {
+    const router = useRouter();
     return (
         <Box style={styles.container}>
             {/* 🔹 닫기 버튼 */}
-            <Pressable style={styles.closeButton} onPress={() => navigation.goBack()}>
+            <Pressable style={styles.closeButton} onPress={() => router.back()}>
                 <Icon as={Ionicons} name="close" size="xl" color="gray"/>
             </Pressable>
 
@@ -43,7 +45,7 @@ const SocialLoginScreen = ({navigation}) => {
                     </HStack>
                 </Button>
 
-                <Button style={[styles.socialButton, styles.email]} onPress={() => console.log("이메일 로그인")}>
+                <Button style={[styles.socialButton, styles.email]} onPress={() => router.push('/screens/TestScreen')}>
                     <HStack style={styles.buttonContent}>
                         <Icon as={FontAwesome} name="envelope" size="md" color="blue"/>
                         <Text style={styles.emailText}>이메일로 시작하기</Text>
