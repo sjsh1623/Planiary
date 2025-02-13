@@ -13,12 +13,12 @@ import { Icon } from "@/components/ui/icon";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
-const EmailRegisterScreen = () => {
+const ForgotPasswordScreen = () => {
     const router = useRouter();
     const [email, setEmail] = useState("");
     const [focused, setFocused] = useState(false);
 
-    // ✅ 이메일 유효성 검사 (간단한 정규식)
+    // ✅ 이메일 유효성 검사
     const isValidEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -33,18 +33,21 @@ const EmailRegisterScreen = () => {
         >
             {/* 뒤로가기 버튼 */}
             <Pressable style={styles.backButton} onPress={() => router.back()}>
-                <Text style={styles.backButtonText}>{"<"}</Text>
+                <Ionicons name="chevron-back" size={24} color="black" />
             </Pressable>
 
-            {/* 페이지 타이틀 */}
-            <Text style={styles.header}>이메일로 회원가입</Text>
+            {/* 타이틀 */}
+            <Text style={styles.title}>비밀번호를 잊으셨나요?</Text>
+            <Text style={styles.description}>
+                비밀번호를 재설정하려는 계정(이메일)을 입력해주세요.
+            </Text>
 
             {/* 이메일 입력 필드 */}
             <View style={styles.inputWrapper}>
-                <Text style={styles.inputLabel}>이메일</Text>
+                <Text style={styles.inputLabel}>이메일 주소</Text>
                 <View style={[styles.inputContainer, focused && styles.inputFocused]}>
                     <TextInput
-                        placeholder="example@gmail.com"
+                        placeholder="이메일 주소 입력"
                         placeholderTextColor="#B0B0B0"
                         style={styles.input}
                         keyboardType="email-address"
@@ -54,26 +57,26 @@ const EmailRegisterScreen = () => {
                         value={email}
                         onChangeText={setEmail}
                     />
-                    {/* ✅ 이메일 유효하면 체크 아이콘 표시 (크기 & 색상 변경) */}
+                    {/* ✅ 유효한 이메일 입력 시 체크 아이콘 */}
                     {isEmailValid && (
                         <Icon as={Ionicons} name="checkmark-circle" size="2xl" color="#4CAF50" />
                     )}
                 </View>
             </View>
 
-            {/* 이메일 인증 요청 버튼 */}
+            {/* 이메일 전송 버튼 */}
             <Button
                 style={[styles.button, !isEmailValid && styles.buttonDisabled]}
                 disabled={!isEmailValid}
-                onPress={() => console.log("이메일 인증 요청")}
+                onPress={() => console.log("이메일 전송")}
             >
-                <Text style={styles.buttonText}>이메일 인증 요청</Text>
+                <Text style={styles.buttonText}>이메일 전송</Text>
             </Button>
         </KeyboardAvoidingView>
     );
 };
 
-export default EmailRegisterScreen;
+export default ForgotPasswordScreen;
 
 const styles = StyleSheet.create({
     container: {
@@ -87,23 +90,26 @@ const styles = StyleSheet.create({
         top: 50,
         left: 20,
     },
-    backButtonText: {
-        fontSize: 24,
-        color: "#000",
-    },
-    header: {
+    title: {
         fontSize: 22,
         fontWeight: "bold",
         alignSelf: "center",
-        marginBottom: 40,
+        marginBottom: 10,
         paddingTop: 10,
+    },
+    description: {
+        fontSize: 14,
+        color: "#555",
+        alignSelf: "center",
+        marginBottom: 40,
+        textAlign: "center",
     },
     inputWrapper: {
         marginBottom: 15,
     },
     inputLabel: {
         fontSize: 14,
-        color: "#555",
+        color: "#007AFF",
         marginBottom: 5,
     },
     inputContainer: {

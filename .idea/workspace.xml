@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Agreement) : Add Policy Agreement Page">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/EmailLoginScreen.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Register) : Add Email Register Page">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/ForgotPasswordScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/EmailLoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/EmailLoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/RegisterEmailScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/RegisterEmailScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/TestScreen.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sjsh1623/Planiary.git&quot;,
-    &quot;accountId&quot;: &quot;6dbbe7e8-1f3c-4e02-bac1-f6e8a56ce8eb&quot;
+    &quot;accountId&quot;: &quot;9f96a6a7-ae92-4b47-9229-cfaa4e9e810e&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -55,6 +60,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/andrewlim/Desktop/Develop/Planiary&quot;,
@@ -63,7 +69,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/andrewlim/Desktop/Develop/Planiary/node_modules/typescript/lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/andrewlim/Desktop/Toy/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -78,8 +84,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +113,8 @@
       <workItem from="1738729575172" duration="1166000" />
       <workItem from="1738982470512" duration="10272000" />
       <workItem from="1739065822738" duration="3702000" />
+      <workItem from="1739370273752" duration="2895000" />
+      <workItem from="1739451907681" duration="1375000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
@@ -180,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739106290489</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat (Register) : Add Email Register Page">
+      <option name="closed" value="true" />
+      <created>1739372379223</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739372379223</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +225,7 @@
     <MESSAGE value="refactor (Cities Page) : Refactor cites screen&#10;&#10;+ All component needs to have directories therefore I can sort them properly" />
     <MESSAGE value="feat (Navigation) : Add Auth Navigations" />
     <MESSAGE value="feat (Agreement) : Add Policy Agreement Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (Agreement) : Add Policy Agreement Page" />
+    <MESSAGE value="feat (Register) : Add Email Register Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (Register) : Add Email Register Page" />
   </component>
 </project>

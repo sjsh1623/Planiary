@@ -67,7 +67,7 @@ const EmailLoginScreen = () => {
                     />
                 </View>
                 {/* 비밀번호 재설정 버튼 (비밀번호 입력 아래 배치) */}
-                <Pressable onPress={() => console.log("비밀번호 재설정")} style={styles.resetPassword}>
+                <Pressable onPress={() => router.push("/screens/ForgotPasswordScreen")} style={styles.resetPassword}>
                     <Text style={styles.resetPasswordText}>비밀번호 재설정</Text>
                 </Pressable>
             </View>
@@ -84,7 +84,7 @@ const EmailLoginScreen = () => {
             {/* 회원가입 */}
             <View style={styles.footer}>
                 <Text style={styles.footerText}>계정이 없으신가요?</Text>
-                <Pressable onPress={() => router.push("/(auth)/screens/RegisterScreen")}>
+                <Pressable onPress={() => router.push("/screens/RegisterEmailScreen")}>
                     <Text style={styles.signupText}>이메일로 회원가입</Text>
                 </Pressable>
             </View>

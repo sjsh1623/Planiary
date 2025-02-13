@@ -45,7 +45,8 @@ const SocialLoginScreen = () => {
                     </HStack>
                 </Button>
 
-                <Button style={[styles.socialButton, styles.email]} onPress={() => router.push('/screens/EmailLoginScreen')}>
+                <Button style={[styles.socialButton, styles.email]}
+                        onPress={() => router.push('/screens/EmailLoginScreen')}>
                     <HStack style={styles.buttonContent}>
                         <Icon as={FontAwesome} name="envelope" size="md" color="blue"/>
                         <Text style={styles.emailText}>이메일로 시작하기</Text>
@@ -53,7 +54,9 @@ const SocialLoginScreen = () => {
                 </Button>
 
                 {/* 🔹 회원가입 버튼 (마지막 버튼 다음에 배치) */}
-                <Pressable style={styles.signUp} onPress={() => router.push('/screens/TermsAgreementScreen')}>
+                <Pressable style={styles.signUp} onPress={() => {
+                    router.push('/screens/RegisterEmailScreen')
+                }}>
                     <Text style={styles.signUpText}>회원가입</Text>
                 </Pressable>
             </VStack>
