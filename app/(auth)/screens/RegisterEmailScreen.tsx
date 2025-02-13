@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
     View,
     TextInput,
@@ -7,11 +7,11 @@ import {
     KeyboardAvoidingView,
     Platform
 } from "react-native";
-import { Text } from "@/components/ui/text";
-import { Button } from "@/components/ui/button";
-import { Icon } from "@/components/ui/icon";
-import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
+import {Text} from "@/components/ui/text";
+import {Button} from "@/components/ui/button";
+import {Icon} from "@/components/ui/icon";
+import {Ionicons} from "@expo/vector-icons";
+import {useRouter} from "expo-router";
 
 const EmailRegisterScreen = () => {
     const router = useRouter();
@@ -56,7 +56,7 @@ const EmailRegisterScreen = () => {
                     />
                     {/* ✅ 이메일 유효하면 체크 아이콘 표시 (크기 & 색상 변경) */}
                     {isEmailValid && (
-                        <Icon as={Ionicons} name="checkmark-circle" size="2xl" color="#4CAF50" />
+                        <Icon as={Ionicons} name="checkmark-circle" size="2xl" color="#4CAF50"/>
                     )}
                 </View>
             </View>
@@ -65,7 +65,7 @@ const EmailRegisterScreen = () => {
             <Button
                 style={[styles.button, !isEmailValid && styles.buttonDisabled]}
                 disabled={!isEmailValid}
-                onPress={() => console.log("이메일 인증 요청")}
+                onPress={() => router.push({pathname: "/screens/EmailVerificationScreen", params: {email}})}
             >
                 <Text style={styles.buttonText}>이메일 인증 요청</Text>
             </Button>

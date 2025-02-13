@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Register) : Add Email Register Page">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/ForgotPasswordScreen.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Register) : Add Register Scrren and Reset Password">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/EmailVerificationScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/EmailLoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/EmailLoginScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(auth)/screens/RegisterEmailScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/RegisterEmailScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/SocialLoginScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/TestScreen.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,7 @@
       <workItem from="1738982470512" duration="10272000" />
       <workItem from="1739065822738" duration="3702000" />
       <workItem from="1739370273752" duration="2895000" />
-      <workItem from="1739451907681" duration="1375000" />
+      <workItem from="1739451907681" duration="2887000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
@@ -196,7 +191,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739372379223</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat (Update) : Update Package Json">
+      <option name="closed" value="true" />
+      <created>1739453388070</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739453388070</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat (Register) : Add Register Scrren and Reset Password">
+      <option name="closed" value="true" />
+      <created>1739453428489</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739453428489</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +237,8 @@
     <MESSAGE value="feat (Navigation) : Add Auth Navigations" />
     <MESSAGE value="feat (Agreement) : Add Policy Agreement Page" />
     <MESSAGE value="feat (Register) : Add Email Register Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (Register) : Add Email Register Page" />
+    <MESSAGE value="feat (Update) : Update Package Json" />
+    <MESSAGE value="feat (Register) : Add Register Scrren and Reset Password" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (Register) : Add Register Scrren and Reset Password" />
   </component>
 </project>
