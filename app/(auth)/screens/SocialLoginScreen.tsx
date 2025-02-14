@@ -55,7 +55,7 @@ const SocialLoginScreen = () => {
 
                 {/* 🔹 회원가입 버튼 (마지막 버튼 다음에 배치) */}
                 <Pressable style={styles.signUp} onPress={() => {
-                    router.push('/screens/RegisterEmailScreen')
+                    router.push('/screens/EmailRegisterScreen')
                 }}>
                     <Text style={styles.signUpText}>회원가입</Text>
                 </Pressable>

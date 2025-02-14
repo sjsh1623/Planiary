@@ -8,38 +8,40 @@ import { useRouter } from "expo-router";
 import { Icon } from "@/components/ui/icon";
 import { authStyles } from "@/app/(auth)/styles/authStyles";
 
-const ForgotPasswordScreen = () => {
+const EmailRegisterScreen = () => {
     const router = useRouter();
     const [email, setEmail] = useState("");
     const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isEmailValid = isValidEmail(email);
 
     return (
-        <AuthScreenTemplate header="비밀번호를 잊으셨나요?">
-            <Text style={authStyles.description}>
-                비밀번호를 재설정하려는 계정(이메일)을 입력해주세요.
-            </Text>
+        <AuthScreenTemplate header="이메일로 회원가입">
             <AuthInput
-                label="이메일 주소"
-                placeholder="이메일 주소 입력"
+                label="이메일"
+                placeholder="example@gmail.com"
                 keyboardType="email-address"
                 autoCapitalize="none"
                 value={email}
                 onChangeText={setEmail}
             >
                 {isEmailValid && (
-                    <Icon as={Ionicons} name="checkmark-circle" size="2xl" color="#4CAF50" />
+                    <Icon as={Ionicons} name="checkmark-circle" size="xl" color="#4CAF50" />
                 )}
             </AuthInput>
             <Button
                 style={[authStyles.button, !isEmailValid && authStyles.buttonDisabled]}
                 disabled={!isEmailValid}
-                onPress={() => console.log("이메일 전송")}
+                onPress={() =>
+                    router.push({
+                        pathname: "/screens/EmailVerificationScreen",
+                        params: { email },
+                    })
+                }
             >
-                <Text style={authStyles.buttonText}>이메일 전송</Text>
+                <Text style={authStyles.buttonText}>이메일 인증 요청</Text>
             </Button>
         </AuthScreenTemplate>
     );
 };
 
-export default ForgotPasswordScreen;
+export default EmailRegisterScreen;

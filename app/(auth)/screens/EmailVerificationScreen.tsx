@@ -1,18 +1,13 @@
-import React, {useState, useRef, useEffect} from "react";
-import {
-    View,
-    TextInput,
-    StyleSheet,
-    Pressable,
-    KeyboardAvoidingView,
-    Platform,
-    Text,
-} from "react-native";
-import {Button} from "@/components/ui/button";
-import {useLocalSearchParams, useRouter} from "expo-router";
+import React, { useState, useRef, useEffect } from "react";
+import { View, TextInput, Pressable } from "react-native";
+import AuthScreenTemplate from "@/app/(auth)/template/AuthScreenTemplate";
+import { Text } from "@/components/ui/text";
+import { Button } from "@/components/ui/button";
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { authStyles } from "@/app/(auth)/styles/authStyles";
 
 const CODE_LENGTH = 6;
-const TIMER_SECONDS = 180; // 3분 카운트다운
+const TIMER_SECONDS = 180;
 
 const EmailVerificationScreen = () => {
     const router = useRouter();
@@ -39,7 +34,6 @@ const EmailVerificationScreen = () => {
             const newCode = [...code];
             newCode[index] = text;
             setCode(newCode);
-
             if (text !== "" && index < CODE_LENGTH - 1) {
                 inputRefs.current[index + 1].focus();
             }
@@ -53,33 +47,26 @@ const EmailVerificationScreen = () => {
     };
 
     return (
-        <KeyboardAvoidingView
-            behavior={Platform.OS === "ios" ? "padding" : "height"}
-            style={styles.container}
+        <AuthScreenTemplate
+            header={
+                <View style={authStyles.titleContainer}>
+                    <Text style={authStyles.headerLeft}>이메일 계정 인증</Text>
+                    <Text style={authStyles.emailText}>{email}</Text>
+                </View>
+            }
         >
-            {/* 🔙 뒤로 가기 버튼 */}
-            <Pressable style={styles.backButton} onPress={() => router.back()}>
-                <Text style={styles.backButtonText}>{"<"}</Text>
-            </Pressable>
-
-            {/* 🏷️ 타이틀과 이메일 주소 */}
-            <View style={styles.titleContainer}>
-                <Text style={styles.header}>이메일 계정 인증</Text>
-                <Text style={styles.emailText}>{email}</Text>
-            </View>
-
-            {/* ✉️ 설명 문구 */}
-            <Text style={styles.subText}>
+            <Text style={authStyles.subText}>
                 계정 확인을 위해 위 이메일로 보내드린 인증 코드를 입력해 주세요.
             </Text>
-
-            {/* 🔢 인증 코드 입력 */}
-            <View style={styles.codeContainer}>
+            <View style={authStyles.codeContainer}>
                 {code.map((num, index) => (
                     <TextInput
                         key={index}
                         ref={(ref) => (inputRefs.current[index] = ref!)}
-                        style={[styles.codeInput, num !== "" && styles.codeInputFilled]}
+                        style={[
+                            authStyles.codeInput,
+                            num !== "" && authStyles.codeInputFilled,
+                        ]}
                         keyboardType="numeric"
                         maxLength={1}
                         value={num}
@@ -88,113 +75,23 @@ const EmailVerificationScreen = () => {
                     />
                 ))}
             </View>
-
-            {/* ⏳ 타이머 및 코드 재전송 */}
-            <View style={styles.footer}>
-                <Text style={styles.timer}>
+            <View style={authStyles.footerRow}>
+                <Text style={authStyles.timer}>
                     {Math.floor(timer / 60)}:{(timer % 60).toString().padStart(2, "0")}
                 </Text>
                 <Pressable onPress={() => setTimer(TIMER_SECONDS)}>
-                    <Text style={styles.resendText}>인증 코드 재전송</Text>
+                    <Text style={authStyles.resendText}>인증 코드 재전송</Text>
                 </Pressable>
             </View>
-
-            {/* ✅ 인증 완료 버튼 */}
             <Button
-                style={[styles.button, !isValid && styles.buttonDisabled]}
+                style={[authStyles.button, !isValid && authStyles.buttonDisabled]}
                 disabled={!isValid}
                 onPress={() => console.log("인증 완료")}
             >
-                <Text style={styles.buttonText}>이메일 인증 완료</Text>
+                <Text style={authStyles.buttonText}>이메일 인증 완료</Text>
             </Button>
-        </KeyboardAvoidingView>
+        </AuthScreenTemplate>
     );
 };
 
 export default EmailVerificationScreen;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#FFFFFF",
-        paddingHorizontal: 20,
-        justifyContent: "center",
-    },
-    backButton: {
-        position: "absolute",
-        top: 50,
-        left: 20,
-    },
-    backButtonText: {
-        fontSize: 24,
-        color: "#000",
-    },
-    titleContainer: {
-        alignSelf: "flex-start", // 🔄 왼쪽 정렬
-        marginBottom: 10,
-    },
-    header: {
-        fontSize: 22,
-        fontWeight: "bold",
-        marginBottom: 2,
-    },
-    emailText: {
-        paddingVertical: 12,
-        fontSize: 18,
-        fontWeight: "bold",
-        color: "#007AFF", // ✅ 파란색
-    },
-    subText: {
-        fontSize: 14,
-        color: "#555",
-        textAlign: "left", // 왼쪽 정렬
-        marginBottom: 30,
-    },
-    codeContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginBottom: 20,
-    },
-    codeInput: {
-        width: 50,
-        height: 50,
-        borderWidth: 1,
-        borderColor: "#DADADA",
-        borderRadius: 8,
-        textAlign: "center",
-        fontSize: 20,
-    },
-    codeInputFilled: {
-        borderColor: "#007AFF",
-        backgroundColor: "#E8F0FE",
-    },
-    footer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: 20,
-    },
-    timer: {
-        fontSize: 14,
-        color: "red",
-    },
-    resendText: {
-        fontSize: 14,
-        color: "#007AFF",
-        textDecorationLine: "underline",
-    },
-    button: {
-        backgroundColor: "#007AFF",
-        alignItems: "center",
-        borderRadius: 8,
-        minHeight: 50,
-    },
-    buttonDisabled: {
-        backgroundColor: "#B0B0B0",
-    },
-    buttonText: {
-        fontSize: 16,
-        color: "#FFFFFF",
-        fontWeight: "bold",
-    },
-});

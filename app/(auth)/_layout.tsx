@@ -34,7 +34,7 @@ export default function AuthLayout() {
                 }}
             />
             <Stack.Screen
-                name="screens/RegisterEmailScreen"
+                name="screens/EmailRegisterScreen"
                 options={{
                     animation: "slide_from_right", // ✅ 명확하게 애니메이션 지정
                     presentation: "card", // ✅ 모달이 아닌 일반적인 카드 스타일 사용
