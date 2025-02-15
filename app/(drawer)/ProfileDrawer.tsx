@@ -58,10 +58,15 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
 
                     {/* ✅ 수평 메뉴 (내 여행, 내 저장, 내 리뷰, 내 여행기) */}
                     <HStack style={styles.menuRow}>
-                        <VStack style={styles.menuItem}>
-                            <Icon as={Ionicons} name="airplane" size="xl" color="black"/>
-                            <Text style={styles.menuText}>내 여행</Text>
-                        </VStack>
+                        <Pressable onPress={() => {
+                            onClose()
+                            router.push("/screens/TravelActivityScreen")
+                        }}>
+                            <VStack style={styles.menuItem}>
+                                <Icon as={Ionicons} name="airplane" size="xl" color="black"/>
+                                <Text style={styles.menuText}>내 여행</Text>
+                            </VStack>
+                        </Pressable>
                         <VStack style={styles.menuItem}>
                             <Icon as={Ionicons} name="heart-outline" size="xl" color="black"/>
                             <Text style={styles.menuText}>내 저장</Text>
