@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="feat (Register) : Add Register Scrren and Reset Password">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/screens/EmailVerificationScreen.tsx" afterDir="false" />
+    <list default="true" id="7c20b64d-7dd3-4551-86ac-aa4049bc4f79" name="Changes" comment="fixup! feat (Refactor) : Add Profile Screen">
+      <change afterPath="$PROJECT_DIR$/app/(profile)/screens/EditProfileScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(auth)/screens/RegisterEmailScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/screens/RegisterEmailScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(profile)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(profile)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(profile)/screens/TravelActivityScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(profile)/screens/TravelActivityScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/(profile)/screens" />
       <recent name="$PROJECT_DIR$/app/(tabs)/constants" />
       <recent name="$PROJECT_DIR$/app/(drawer)" />
       <recent name="$PROJECT_DIR$/app/(auth)/screens" />
@@ -109,7 +112,9 @@
       <workItem from="1738982470512" duration="10272000" />
       <workItem from="1739065822738" duration="3702000" />
       <workItem from="1739370273752" duration="2895000" />
-      <workItem from="1739451907681" duration="2887000" />
+      <workItem from="1739451907681" duration="2916000" />
+      <workItem from="1739538715805" duration="4901000" />
+      <workItem from="1739619897914" duration="5583000" />
     </task>
     <task id="LOCAL-00001" summary="feat (Main) : Add Main Page &amp; fix some init issues">
       <option name="closed" value="true" />
@@ -207,7 +212,31 @@
       <option name="project" value="LOCAL" />
       <updated>1739453428489</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat (Register) : Add EmailVerificationScreen">
+      <option name="closed" value="true" />
+      <created>1739454823256</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739454823256</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat (Refactor) : Remove duplicated logics and component. Make component reusable">
+      <option name="closed" value="true" />
+      <created>1739544533299</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739544533299</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat (Refactor) : Add Profile Screen">
+      <option name="closed" value="true" />
+      <created>1739622081489</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739622081489</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +268,11 @@
     <MESSAGE value="feat (Register) : Add Email Register Page" />
     <MESSAGE value="feat (Update) : Update Package Json" />
     <MESSAGE value="feat (Register) : Add Register Scrren and Reset Password" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (Register) : Add Register Scrren and Reset Password" />
+    <MESSAGE value="feat (Register) : Add EmailVerificationScreen" />
+    <MESSAGE value="feat (Refactor) : Remove duplicated logics and component. Make component reusable" />
+    <MESSAGE value="feat (profile) : Add Profile Screen" />
+    <MESSAGE value="fixup! feat (Refactor) : Add Profile Screen" />
+    <MESSAGE value="feat (profile) : Add Profile Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (profile) : Add Profile Screen" />
   </component>
 </project>

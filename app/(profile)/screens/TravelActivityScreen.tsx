@@ -8,10 +8,12 @@ import {
     Animated,
     Dimensions,
 } from "react-native";
+import {useRouter} from "expo-router";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-const ProfileScreen = () => {
+const TravelActivityScreen = () => {
+    const router = useRouter();
     const [activeTab, setActiveTab] = useState<"내 여행" | "리뷰" | "여행기">("내 여행");
     const translateX = useRef(new Animated.Value(0)).current;
     const underlineX = useRef(new Animated.Value(0)).current;
@@ -42,7 +44,7 @@ const ProfileScreen = () => {
             <View style={styles.profileContainer}>
                 <Image source={{ uri: "https://via.placeholder.com/80" }} style={styles.profileImage} />
                 <Text style={styles.username}>라라라라</Text>
-                <Pressable onPress={() => console.log("프로필 편집")} style={styles.editProfileButton}>
+                <Pressable onPress={() => router.push("/screens/EditProfileScreen")} style={styles.editProfileButton}>
                     <Text style={styles.editProfileText}>프로필 편집</Text>
                 </Pressable>
             </View>
@@ -113,7 +115,7 @@ const ProfileScreen = () => {
     );
 };
 
-export default ProfileScreen;
+export default TravelActivityScreen;
 
 const styles = StyleSheet.create({
     container: {

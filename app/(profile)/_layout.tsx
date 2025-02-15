@@ -12,6 +12,15 @@ export default function AuthLayout() {
                     gestureEnabled: true,
                 }}
             />
+            <Stack.Screen
+                name="screens/EditProfileScreen"
+                options={{
+                    animation: "slide_from_bottom", // ✅ 명확하게 애니메이션 지정
+                    presentation: "card", // ✅ 모달이 아닌 일반적인 카드 스타일 사용
+                    headerShown: false,
+                    gestureEnabled: true,
+                }}
+            />
         </Stack>
 
     );
