@@ -8,6 +8,7 @@ import BlogList from "@/components/BlogList";
 import Banner from "@/components/Banner";
 import {HEADER_HEIGHT, SCREEN_WIDTH, ANIMATION_DURATION} from "./constants/homeConstants";
 import {dividerStyle} from "./styles/homeStyles";
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {useRouter} from "expo-router";
 
 /**
@@ -54,7 +55,7 @@ const index = () => {
     }, [isTop, bannerTranslateX, bannerImageTranslateX, opacity]);
 
     return (
-        <>
+        <GestureHandlerRootView style={{flex: 1}}>
             {/* 상단 헤더 */}
             <Header/> {/* ✅ navigation 대신 router 사용 */}
             {/* 스크롤 가능한 메인 콘텐츠 영역 */}
@@ -80,7 +81,7 @@ const index = () => {
                 bannerImageTranslateX={bannerImageTranslateX}
                 opacity={opacity}
             />
-        </>
+        </GestureHandlerRootView>
     );
 };
 

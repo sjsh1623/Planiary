@@ -75,10 +75,15 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isVisible, onClose}) => {
                             <Icon as={Ionicons} name="star-outline" size="xl" color="black"/>
                             <Text style={styles.menuText}>내 리뷰</Text>
                         </VStack>
+                        <Pressable onPress={() => {
+                            onClose()
+                            router.push("/screens/WidgetCustomizationScreen")
+                        }}>
                         <VStack style={styles.menuItem}>
                             <Icon as={Ionicons} name="document-text-outline" size="xl" color="black"/>
-                            <Text style={styles.menuText}>내 tripmory</Text>
+                            <Text style={styles.menuText}>내 위젯</Text>
                         </VStack>
+                        </Pressable>
                     </HStack>
 
                     {/* ✅ 목록 메뉴 (세로 정렬) */}
