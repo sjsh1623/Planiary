@@ -6,6 +6,7 @@ import {Text} from "@/components/ui/text";
 import {Icon, CalendarDaysIcon} from "@/components/ui/icon";
 import {bannerStyles} from "@/app/(tabs)/styles/homeStyles";
 import {IMAGE_SIZE, DEFAULT_BANNER_IMAGE} from "@/app/(tabs)/constants/homeConstants";
+import {useRouter} from "expo-router";
 
 interface BannerProps {
     isTop: boolean;
@@ -32,7 +33,7 @@ const Banner: React.FC<BannerProps> = ({
             setIsTop(true); // 🔥 isTop을 true로 변경
         }
     };
-
+    const router = useRouter();
     return (
         <>
             {/* 배너 내 원형 이미지 (애니메이션 적용 대상) */}
@@ -41,6 +42,7 @@ const Banner: React.FC<BannerProps> = ({
                     bannerStyles.imageContainer,
                     {transform: [{translateX: bannerImageTranslateX}]},
                 ]}
+                pointerEvents="none" // ✅ 배너 이미지가 터치를 방해하지 않도록 설정
             >
                 <Pressable onPress={handleImageClick}> {/* 🔥 클릭 이벤트 추가 */}
                     <Image source={{uri: DEFAULT_BANNER_IMAGE}} style={bannerStyles.image}/>
@@ -67,7 +69,9 @@ const Banner: React.FC<BannerProps> = ({
                             D-6 | 2.8 (Sat) - 2.13 (Thu)
                         </Text>
                     </VStack>
-                    <Pressable style={bannerStyles.scheduleButton}>
+                    <Pressable style={bannerStyles.scheduleButton} onPress={() => {
+                        router.push("/screens/TravelHomeScreen")
+                    }}>
                         <Text style={bannerStyles.scheduleButtonText}>내 일정</Text>
                         <Icon as={CalendarDaysIcon} size="sm" color="white"/>
                     </Pressable>

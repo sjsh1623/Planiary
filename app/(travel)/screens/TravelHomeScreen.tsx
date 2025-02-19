@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: "bold",
         color: "#FFFFFF",
+        paddingVertical : 20
     },
     dateContainer: {
         flexDirection: "row",
