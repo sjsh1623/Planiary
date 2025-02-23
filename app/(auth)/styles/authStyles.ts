@@ -7,6 +7,7 @@ export const authStyles = StyleSheet.create({
         backgroundColor: "#FFFFFF",
         paddingHorizontal: 20,
         justifyContent: "center",
+        paddingTop : 40
     },
     // 백버튼
     backButton: {

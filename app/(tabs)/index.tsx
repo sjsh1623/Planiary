@@ -55,7 +55,7 @@ const index = () => {
     }, [isTop, bannerTranslateX, bannerImageTranslateX, opacity]);
 
     return (
-        <GestureHandlerRootView style={{flex: 1}}>
+        <GestureHandlerRootView style={{flex: 1, paddingTop : 40}}>
             {/* 상단 헤더 */}
             <Header/> {/* ✅ navigation 대신 router 사용 */}
             {/* 스크롤 가능한 메인 콘텐츠 영역 */}

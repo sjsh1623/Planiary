@@ -21,8 +21,8 @@ export const headerStyles = StyleSheet.create({
         zIndex: 50,
         paddingHorizontal: 24,
         paddingBottom: 8,
-        paddingTop: 8,
-        height: HEADER_HEIGHT,
+        paddingTop: 8 + 40,
+        height: HEADER_HEIGHT + 40,
         justifyContent: "center",
     },
     innerContainer: {

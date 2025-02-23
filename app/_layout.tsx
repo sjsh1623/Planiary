@@ -30,7 +30,7 @@ export default function RootLayout() {
     return (
         <GestureHandlerRootView style={{flex: 1}}>
             <DrawerProvider>
-                <View style={{flex: 1, paddingTop: 40}}>
+                <View style={{flex: 1}}>
                     <Stack screenOptions={{headerShown: false}}>
                         <Stack.Screen name="(tabs)"/>
                         <Stack.Screen name="(auth)"/>
