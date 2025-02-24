@@ -1,31 +1,43 @@
-import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
-import { Box } from "@/components/ui/box";
-import { Text } from "@/components/ui/text";
-import { Icon } from "@/components/ui/icon";
-import { Pressable } from "@/components/ui/pressable";
-import { HStack } from "@/components/ui/hstack";
-import { VStack } from "@/components/ui/vstack";
-import { Ionicons } from "@expo/vector-icons";
+import React, {useState} from "react";
+import {ScrollView, StyleSheet} from "react-native";
+import {Box} from "@/components/ui/box";
+import {Text} from "@/components/ui/text";
+import {Icon} from "@/components/ui/icon";
+import {Pressable} from "@/components/ui/pressable";
+import {HStack} from "@/components/ui/hstack";
+import {VStack} from "@/components/ui/vstack";
+import {Ionicons} from "@expo/vector-icons";
+import {Grid, GridItem} from "@/components/ui/grid";
+
+const initialWidgets = [
+    {id: "1", title: "위젯 1", size: "full"}, // 100% 너비
+    {id: "2", title: "위젯 2", size: "half"}, // 50% 너비
+    {id: "3", title: "위젯 3", size: "half"}, // 50% 너비
+    {id: "4", title: "위젯 4", size: "full"}, // 100% 너비
+    {id: "5", title: "위젯 5", size: "half"},
+    {id: "6", title: "위젯 6", size: "half"},
+];
 
 const TravelChatScreen = () => {
+    const [widgets, setWidgets] = useState(initialWidgets);
+
     return (
         <Box style={styles.container}>
-            {/* 상단 영역 */}
+            {/* ✅ 상단 영역 */}
             <Box style={styles.header}>
                 <HStack style={styles.headerTop}>
                     <Pressable>
-                        <Icon as={Ionicons} name="close-outline" size="2xl" color="white" />
+                        <Icon as={Ionicons} name="close-outline" size="2xl" color="white"/>
                     </Pressable>
                     <HStack>
                         <Pressable>
-                            <Icon as={Ionicons} name="search-outline" size="2xl" color="white" />
+                            <Icon as={Ionicons} name="search-outline" size="2xl" color="white"/>
                         </Pressable>
-                        <Pressable style={{ marginLeft: 16 }}>
-                            <Icon as={Ionicons} name="map-outline" size="2xl" color="white" />
+                        <Pressable style={{marginLeft: 16}}>
+                            <Icon as={Ionicons} name="map-outline" size="2xl" color="white"/>
                         </Pressable>
-                        <Pressable style={{ marginLeft: 16 }}>
-                            <Icon as={Ionicons} name="menu-outline" size="2xl" color="white" />
+                        <Pressable style={{marginLeft: 16}}>
+                            <Icon as={Ionicons} name="menu-outline" size="2xl" color="white"/>
                         </Pressable>
                     </HStack>
                 </HStack>
@@ -41,66 +53,28 @@ const TravelChatScreen = () => {
                 </VStack>
             </Box>
 
-            {/* 카테고리 탭 */}
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryTabs}>
-                {["현지 채팅", "맛집", "관광", "투어·티켓", "가이드", "숙소", "항공"].map((item, index) => (
-                    <Pressable key={index} style={styles.categoryItem}>
-                        <Text style={styles.categoryText}>{item}</Text>
-                    </Pressable>
-                ))}
-            </ScrollView>
-
-            {/* AI 추천 메시지 */}
-            <Box style={styles.aiRecommendation}>
-                <Text style={styles.aiText}>라라라라님을 위한 트리플 AI 추천</Text>
-                <Icon as={Ionicons} name="information-circle-outline" size="md" color="#888" />
-            </Box>
-
-            {/* 채팅 메시지 목록 */}
-            <ScrollView style={styles.chatContainer}>
-                <VStack>
-                    <HStack style={styles.chatBubble}>
-                        <Box style={styles.profileImage} />
-                        <VStack>
-                            <Text style={styles.chatUser}>노마드</Text>
-                            <Box style={styles.messageBubble}>
-                                <Text style={styles.messageText}>오늘 광장에서 큰 행사가 있나봐요</Text>
-                            </Box>
-                            <Box style={styles.messageBubble}>
-                                <Text style={styles.messageText}>우연히 왔는데 꽤 재밌어요 ㅋㅋ 추천!</Text>
-                            </Box>
-                        </VStack>
-                    </HStack>
-                    <HStack style={styles.chatBubble}>
-                        <Box style={styles.profileImage} />
-                        <VStack>
-                            <Text style={styles.chatUser}>구름따라</Text>
-                            <Box style={styles.messageBubble}>
-                                <Text style={styles.messageText}>저 이따 가볼게요! 공유 감사해요👍</Text>
-                            </Box>
-                        </VStack>
-                    </HStack>
-                </VStack>
-            </ScrollView>
-
-            {/* 하단 배너 */}
-            <Box style={styles.bottomBanner}>
-                <Text style={styles.bannerText}>도쿄 현지 여행자들과 배낭톡 채팅하세요!</Text>
-                <HStack style={styles.tabBar}>
-                    {[
-                        { icon: "home-outline", label: "여행 홈" },
-                        { icon: "chatbubble-outline", label: "배낭톡" },
-                        { icon: "calendar-outline", label: "일정" },
-                        { icon: "heart-outline", label: "저장" },
-                        { icon: "settings-outline", label: "여행 도구" },
-                    ].map((item, index) => (
-                        <VStack key={index} style={styles.tabItem}>
-                            <Icon as={Ionicons} name={item.icon} size="lg" color="gray" />
-                            <Text style={styles.tabText}>{item.label}</Text>
-                        </VStack>
+            {/* ✅ Grid (위젯 리스트) */}
+            <ScrollView contentContainerStyle={styles.widgetContainer}>
+                <Grid
+                    style={styles.grid}
+                    _extra={{
+                        className: "grid-cols-6",
+                    }}
+                >
+                    {widgets.map((widget) => (
+                        <GridItem
+                            key={widget.id}
+                            style={styles.widget}
+                            className="bg-background-50 p-4 rounded-md text-center"
+                            _extra={{
+                                className: widget.size === "full" ? "col-span-6" : "col-span-3",
+                            }}
+                        >
+                            <Text className="text-sm">{widget.title}</Text>
+                        </GridItem>
                     ))}
-                </HStack>
-            </Box>
+                </Grid>
+            </ScrollView>
         </Box>
     );
 };
@@ -110,11 +84,11 @@ export default TravelChatScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F5F5F5",
+        backgroundColor: "#FFFFFF",
     },
     header: {
         backgroundColor: "#26C6DA",
-        paddingTop: 50,
+        paddingTop: 100,
         paddingHorizontal: 16,
         paddingBottom: 20,
     },
@@ -134,7 +108,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: "bold",
         color: "#FFFFFF",
-        paddingVertical : 20
+        paddingVertical: 20,
     },
     dateContainer: {
         flexDirection: "row",
@@ -163,6 +137,22 @@ const styles = StyleSheet.create({
     categoryText: {
         fontSize: 14,
         color: "#333",
+    },
+    widgetContainer: {
+        paddingHorizontal: 16,
+        paddingVertical: 10,
+        backgroundColor: "#FFFFFF",
+    },
+    grid: {
+        gap: 15,
+    },
+    widget: {
+        backgroundColor: "#F0F0F0",
+        padding: 16,
+        borderRadius: 8,
+        alignItems: "center",
+        justifyContent: "center",
+        height: '40%'
     },
     aiRecommendation: {
         flexDirection: "row",
@@ -208,28 +198,5 @@ const styles = StyleSheet.create({
     messageText: {
         fontSize: 14,
         color: "#333",
-    },
-    bottomBanner: {
-        backgroundColor: "#FFFFFF",
-        padding: 12,
-    },
-    bannerText: {
-        fontSize: 14,
-        fontWeight: "bold",
-        textAlign: "center",
-        marginBottom: 8,
-    },
-    tabBar: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        paddingVertical: 12,
-    },
-    tabItem: {
-        alignItems: "center",
-    },
-    tabText: {
-        fontSize: 12,
-        color: "gray",
-        marginTop: 4,
     },
 });
