@@ -10,33 +10,33 @@ import {Ionicons} from "@expo/vector-icons";
 import {Grid, GridItem} from "@/components/ui/grid";
 
 const initialWidgets = [
-    { id: "1", type: "weather", size: "full" }, // 날씨 위젯 (100% 너비)
-    { id: "2", type: "currency", size: "half" }, // 환율 위젯 (50% 너비)
-    { id: "3", type: "destination", size: "half" }, // 목적지 위젯 (50% 너비)
-    { id: "4", type: "budget", size: "half" }, // 예산 위젯 (50% 너비)
+    {id: "1", type: "weather", size: "full"}, // 날씨 위젯 (100% 너비)
+    {id: "2", type: "currency", size: "half"}, // 환율 위젯 (50% 너비)
+    {id: "3", type: "destination", size: "half"}, // 목적지 위젯 (50% 너비)
+    {id: "4", type: "budget", size: "half"}, // 예산 위젯 (50% 너비)
 ];
 
 const hourlyWeatherData = [
-    { time: "5PM", icon: "cloud-outline", temp: "4°" },
-    { time: "6PM", icon: "cloud-outline", temp: "3°" },
-    { time: "6:27PM", icon: "sunny-outline", temp: "2°" },
-    { time: "7PM", icon: "cloud-outline", temp: "2°" },
-    { time: "8PM", icon: "cloud-outline", temp: "1°" },
-    { time: "9PM", icon: "cloud-outline", temp: "0°" },
+    {time: "5PM", icon: "cloud-outline", temp: "4°"},
+    {time: "6PM", icon: "cloud-outline", temp: "3°"},
+    {time: "6:27PM", icon: "sunny-outline", temp: "2°"},
+    {time: "7PM", icon: "cloud-outline", temp: "2°"},
+    {time: "8PM", icon: "cloud-outline", temp: "1°"},
+    {time: "9PM", icon: "cloud-outline", temp: "0°"},
 ];
 
-const Widget = ({ type }: { type: string }) => {
+const Widget = ({type}: { type: string }) => {
     switch (type) {
         case "weather":
             return (
                 <Box style={[styles.widget, styles.weatherWidget]}>
                     <HStack style={styles.weatherHeader}>
-                        <VStack>
+                        <VStack style={{}}>
                             <Text style={styles.weatherLocation}>용인시</Text>
                             <Text style={styles.weatherTemp}>5°</Text>
                         </VStack>
                         <VStack style={styles.weatherInfo}>
-                            <Icon as={Ionicons} name="cloud-outline" size="3xl" color="white" />
+                            <Icon as={Ionicons} name="cloud-outline" size="3xl" color="white"/>
                             <Text style={styles.weatherDesc}>Cloudy</Text>
                             <Text style={styles.weatherSubText}>H:6° L:0°</Text>
                         </VStack>
@@ -45,7 +45,7 @@ const Widget = ({ type }: { type: string }) => {
                         {hourlyWeatherData.map((hour, index) => (
                             <VStack key={index} style={styles.weatherHourItem}>
                                 <Text style={styles.weatherHourText}>{hour.time}</Text>
-                                <Icon as={Ionicons} name={hour.icon} size="md" color="white" />
+                                <Icon as={Ionicons} name={hour.icon} size="md" color="white"/>
                                 <Text style={styles.weatherHourTemp}>{hour.temp}</Text>
                             </VStack>
                         ))}
@@ -55,32 +55,22 @@ const Widget = ({ type }: { type: string }) => {
         case "currency":
             return (
                 <Box style={[styles.widget, styles.currencyWidget]}>
-                    <HStack style={styles.currencyRow}>
-                        <Text style={styles.currencyLabel}>🇺🇸 USD</Text>
-                        <Text style={styles.currencyValue}>1,459.73원</Text>
-                    </HStack>
-                    <HStack style={styles.currencyRow}>
-                        <Text style={styles.currencyLabel}>🇪🇺 EUR</Text>
-                        <Text style={styles.currencyValue}>1,520.84원</Text>
-                    </HStack>
+                    <Text style={styles.widgetTitle}>환율</Text>
+                    <Text style={styles.widgetContent}>1,459.73원</Text>
                 </Box>
             );
         case "destination":
             return (
-                <Box style={[styles.widget, styles.destinationWidget]}>
-                    <VStack style={styles.centerContent}>
-                        <Text style={styles.destinationTitle}>📍 도쿄</Text>
-                        <Text style={styles.destinationSubtitle}>여행 중</Text>
-                    </VStack>
+                <Box style={[styles.widget, styles.defaultWidget]}>
+                    <Text style={styles.widgetTitle}>📍 목적지</Text>
+                    <Text style={styles.widgetContent}>도쿄</Text>
                 </Box>
             );
         case "budget":
             return (
-                <Box style={[styles.widget, styles.budgetWidget]}>
-                    <VStack style={styles.centerContent}>
-                        <Text style={styles.budgetTitle}>💰 남은 예산</Text>
-                        <Text style={styles.budgetAmount}>₩250,000</Text>
-                    </VStack>
+                <Box style={[styles.widget, styles.defaultWidget]}>
+                    <Text style={styles.widgetTitle}>💰 예산</Text>
+                    <Text style={styles.widgetContent}>₩250,000</Text>
                 </Box>
             );
         default:
@@ -90,7 +80,6 @@ const Widget = ({ type }: { type: string }) => {
 
 const TravelHomeScreen = () => {
     const [widgets, setWidgets] = useState(initialWidgets);
-
 
 
     return (
@@ -141,7 +130,7 @@ const TravelHomeScreen = () => {
                                 className: widget.size === "full" ? "col-span-6" : "col-span-3",
                             }}
                         >
-                            <Widget type={widget.type} />
+                            <Widget type={widget.type}/>
                         </GridItem>
                     ))}
                 </Grid>
@@ -226,35 +215,47 @@ const styles = StyleSheet.create({
     },
     halfWidth: {
         width: "48%",
-    },
-
-    // ✅ Apple 스타일 위젯 디자인
+    },    // ✅ Apple 스타일 위젯 디자인
     widget: {
         borderRadius: 18,
         padding: 16,
         shadowColor: "#000",
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.1,
         shadowRadius: 4,
         elevation: 3,
-        minHeight : 100
+        minHeight: 100,
+        justifyContent: "space-between", // ✅ 위젯 내부 요소 배치를 위-아래로
     },
-
     weatherWidget: {
         backgroundColor: "#4A90E2",
+        width: "100%",
+        minHeight: 220, // ✅ 높이를 충분히 확보하여 텍스트가 잘리지 않도록 수정
+        padding: 20,
+        borderRadius: 16,
+        overflow: "hidden", // ✅ 넘치는 요소 방지
     },
     weatherHeader: {
         flexDirection: "row",
         justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap", // ✅ 컨텐츠가 너무 커지면 줄바꿈 가능하도록
     },
-    weatherFooter: {
-        marginTop: 8,
-        justifyContent: "center",
+    weatherTextContainer: {
+        flexGrow: 1, // ✅ 공간이 부족하면 자동 확장
+        alignItems: "flex-start",
     },
     weatherTemp: {
-        fontSize: 40,
+        fontSize: 50, // ✅ 글자 크기 유지
         fontWeight: "bold",
         color: "white",
+        lineHeight: 60, // ✅ 텍스트가 잘리지 않도록 추가
+        minWidth: 100, // ✅ 최소 너비 확보
+        flexShrink: 1, // ✅ 필요하면 자동 축소
+        overflow: "visible", // ✅ 텍스트가 줄어들지 않도록
+    },
+    weatherInfo: {
+        alignItems: "flex-end",
     },
     weatherDesc: {
         fontSize: 16,
@@ -264,58 +265,47 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: "white",
     },
+    weatherHourly: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        width: "100%",
+        marginTop: 12,
+    },
+    weatherHourItem: {
+        alignItems: "center",
+    },
+    weatherHourText: {
+        fontSize: 14,
+        color: "white",
+    },
+    weatherHourTemp: {
+        fontSize: 14,
+        color: "white",
+        marginTop: 4,
+    },
+    // ✅ 공통 스타일 (제목 왼쪽, 내용 오른쪽 하단)
+    defaultWidget: {
+        backgroundColor: "#F8F8F8",
+    },
+    widgetTitle: {
+        fontSize: 16,
+        fontWeight: "bold",
+        color: "#333",
+        position: "absolute",
+        top: 10,
+        left: 10,
+    },
+    widgetContent: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "#000",
+        position: "absolute",
+        bottom: 10,
+        right: 10,
+    },
 
     currencyWidget: {
         backgroundColor: "#FFF",
-    },
-    currencyRow: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginBottom: 8,
-    },
-    currencyLabel: {
-        fontSize: 14,
-        color: "#333",
-    },
-    currencyValue: {
-        fontSize: 18,
-        fontWeight: "bold",
-        color: "#000",
-    },
-
-    destinationWidget: {
-        backgroundColor: "#222",
-    },
-    destinationContent: {
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    destinationTitle: {
-        fontSize: 18,
-        fontWeight: "bold",
-        color: "white",
-    },
-    destinationSubtitle: {
-        fontSize: 14,
-        color: "white",
-    },
-
-    budgetWidget: {
-        backgroundColor: "#FFD700",
-    },
-    budgetContent: {
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    budgetTitle: {
-        fontSize: 14,
-        fontWeight: "bold",
-        color: "#333",
-    },
-    budgetAmount: {
-        fontSize: 20,
-        fontWeight: "bold",
-        color: "#000",
     },
     aiRecommendation: {
         flexDirection: "row",
@@ -361,5 +351,9 @@ const styles = StyleSheet.create({
     messageText: {
         fontSize: 14,
         color: "#333",
+    },
+    centerContent: {
+        justifyContent: "center",
+        alignItems: "center",
     },
 });
