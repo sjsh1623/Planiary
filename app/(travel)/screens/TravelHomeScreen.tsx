@@ -25,19 +25,39 @@ const hourlyWeatherData = [
     {time: "9PM", icon: "cloud-outline", temp: "0°"},
 ];
 
-const Widget = ({type}: { type: string }) => {
+const getWeatherColor = (condition: string) => {
+    switch (condition.toLowerCase()) {
+        case "cloudy":
+            return "#7E8C99"; // ✅ 흐림 (회색)
+        case "rainy":
+            return "#4B4F54"; // ✅ 비 (어두운 회색)
+        case "sunny":
+            return "#4A90E2"; // ✅ 맑음 (하늘색)
+        default:
+            return "#6AABD2"; // ✅ 기본값 (연한 파란색)
+    }
+};
+
+const Widget = ({type, weatherCondition}: { type: string; weatherCondition?: string }) => {
     switch (type) {
         case "weather":
             return (
-                <Box style={[styles.widget, styles.weatherWidget]}>
+                <Box
+                    style={[
+                        styles.widget,
+                        {
+                            backgroundColor: getWeatherColor(weatherCondition || "Sunny"), // ✅ 동적으로 색상 변경
+                        },
+                    ]}
+                >
                     <HStack style={styles.weatherHeader}>
-                        <VStack style={{}}>
+                        <VStack style={styles.weatherTextContainer}>
                             <Text style={styles.weatherLocation}>용인시</Text>
                             <Text style={styles.weatherTemp}>5°</Text>
                         </VStack>
                         <VStack style={styles.weatherInfo}>
                             <Icon as={Ionicons} name="cloud-outline" size="3xl" color="white"/>
-                            <Text style={styles.weatherDesc}>Cloudy</Text>
+                            <Text style={styles.weatherDesc}>{weatherCondition || "Cloudy"}</Text>
                             <Text style={styles.weatherSubText}>H:6° L:0°</Text>
                         </VStack>
                     </HStack>
@@ -130,7 +150,7 @@ const TravelHomeScreen = () => {
                                 className: widget.size === "full" ? "col-span-6" : "col-span-3",
                             }}
                         >
-                            <Widget type={widget.type}/>
+                            <Widget type={widget.type} weatherCondition="Rainy"/>
                         </GridItem>
                     ))}
                 </Grid>
@@ -234,6 +254,11 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 16,
         overflow: "hidden", // ✅ 넘치는 요소 방지
+    },
+    weatherLocation: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "white",
     },
     weatherHeader: {
         flexDirection: "row",
