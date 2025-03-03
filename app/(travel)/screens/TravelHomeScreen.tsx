@@ -10,16 +10,88 @@ import {Ionicons} from "@expo/vector-icons";
 import {Grid, GridItem} from "@/components/ui/grid";
 
 const initialWidgets = [
-    {id: "1", title: "위젯 1", size: "full"}, // 100% 너비
-    {id: "2", title: "위젯 2", size: "half"}, // 50% 너비
-    {id: "3", title: "위젯 3", size: "half"}, // 50% 너비
-    {id: "4", title: "위젯 4", size: "full"}, // 100% 너비
-    {id: "5", title: "위젯 5", size: "half"},
-    {id: "6", title: "위젯 6", size: "half"},
+    { id: "1", type: "weather", size: "full" }, // 날씨 위젯 (100% 너비)
+    { id: "2", type: "currency", size: "half" }, // 환율 위젯 (50% 너비)
+    { id: "3", type: "destination", size: "half" }, // 목적지 위젯 (50% 너비)
+    { id: "4", type: "budget", size: "half" }, // 예산 위젯 (50% 너비)
 ];
 
-const TravelChatScreen = () => {
+const hourlyWeatherData = [
+    { time: "5PM", icon: "cloud-outline", temp: "4°" },
+    { time: "6PM", icon: "cloud-outline", temp: "3°" },
+    { time: "6:27PM", icon: "sunny-outline", temp: "2°" },
+    { time: "7PM", icon: "cloud-outline", temp: "2°" },
+    { time: "8PM", icon: "cloud-outline", temp: "1°" },
+    { time: "9PM", icon: "cloud-outline", temp: "0°" },
+];
+
+const Widget = ({ type }: { type: string }) => {
+    switch (type) {
+        case "weather":
+            return (
+                <Box style={[styles.widget, styles.weatherWidget]}>
+                    <HStack style={styles.weatherHeader}>
+                        <VStack>
+                            <Text style={styles.weatherLocation}>용인시</Text>
+                            <Text style={styles.weatherTemp}>5°</Text>
+                        </VStack>
+                        <VStack style={styles.weatherInfo}>
+                            <Icon as={Ionicons} name="cloud-outline" size="3xl" color="white" />
+                            <Text style={styles.weatherDesc}>Cloudy</Text>
+                            <Text style={styles.weatherSubText}>H:6° L:0°</Text>
+                        </VStack>
+                    </HStack>
+                    <HStack style={styles.weatherHourly}>
+                        {hourlyWeatherData.map((hour, index) => (
+                            <VStack key={index} style={styles.weatherHourItem}>
+                                <Text style={styles.weatherHourText}>{hour.time}</Text>
+                                <Icon as={Ionicons} name={hour.icon} size="md" color="white" />
+                                <Text style={styles.weatherHourTemp}>{hour.temp}</Text>
+                            </VStack>
+                        ))}
+                    </HStack>
+                </Box>
+            );
+        case "currency":
+            return (
+                <Box style={[styles.widget, styles.currencyWidget]}>
+                    <HStack style={styles.currencyRow}>
+                        <Text style={styles.currencyLabel}>🇺🇸 USD</Text>
+                        <Text style={styles.currencyValue}>1,459.73원</Text>
+                    </HStack>
+                    <HStack style={styles.currencyRow}>
+                        <Text style={styles.currencyLabel}>🇪🇺 EUR</Text>
+                        <Text style={styles.currencyValue}>1,520.84원</Text>
+                    </HStack>
+                </Box>
+            );
+        case "destination":
+            return (
+                <Box style={[styles.widget, styles.destinationWidget]}>
+                    <VStack style={styles.centerContent}>
+                        <Text style={styles.destinationTitle}>📍 도쿄</Text>
+                        <Text style={styles.destinationSubtitle}>여행 중</Text>
+                    </VStack>
+                </Box>
+            );
+        case "budget":
+            return (
+                <Box style={[styles.widget, styles.budgetWidget]}>
+                    <VStack style={styles.centerContent}>
+                        <Text style={styles.budgetTitle}>💰 남은 예산</Text>
+                        <Text style={styles.budgetAmount}>₩250,000</Text>
+                    </VStack>
+                </Box>
+            );
+        default:
+            return null;
+    }
+};
+
+const TravelHomeScreen = () => {
     const [widgets, setWidgets] = useState(initialWidgets);
+
+
 
     return (
         <Box style={styles.container}>
@@ -64,13 +136,12 @@ const TravelChatScreen = () => {
                     {widgets.map((widget) => (
                         <GridItem
                             key={widget.id}
-                            style={styles.widget}
-                            className="bg-background-50 p-4 rounded-md text-center"
+                            style={[styles.gridItem, widget.size === "full" ? styles.fullWidth : styles.halfWidth]}
                             _extra={{
                                 className: widget.size === "full" ? "col-span-6" : "col-span-3",
                             }}
                         >
-                            <Text className="text-sm">{widget.title}</Text>
+                            <Widget type={widget.type} />
                         </GridItem>
                     ))}
                 </Grid>
@@ -79,7 +150,7 @@ const TravelChatScreen = () => {
     );
 };
 
-export default TravelChatScreen;
+export default TravelHomeScreen;
 
 const styles = StyleSheet.create({
     container: {
@@ -146,13 +217,105 @@ const styles = StyleSheet.create({
     grid: {
         gap: 15,
     },
+    gridItem: {
+        borderRadius: 16,
+        overflow: "hidden",
+    },
+    fullWidth: {
+        width: "100%",
+    },
+    halfWidth: {
+        width: "48%",
+    },
+
+    // ✅ Apple 스타일 위젯 디자인
     widget: {
-        backgroundColor: "#F0F0F0",
+        borderRadius: 18,
         padding: 16,
-        borderRadius: 8,
-        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 3,
+        minHeight : 100
+    },
+
+    weatherWidget: {
+        backgroundColor: "#4A90E2",
+    },
+    weatherHeader: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+    weatherFooter: {
+        marginTop: 8,
         justifyContent: "center",
-        height: '40%'
+    },
+    weatherTemp: {
+        fontSize: 40,
+        fontWeight: "bold",
+        color: "white",
+    },
+    weatherDesc: {
+        fontSize: 16,
+        color: "white",
+    },
+    weatherSubText: {
+        fontSize: 14,
+        color: "white",
+    },
+
+    currencyWidget: {
+        backgroundColor: "#FFF",
+    },
+    currencyRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 8,
+    },
+    currencyLabel: {
+        fontSize: 14,
+        color: "#333",
+    },
+    currencyValue: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "#000",
+    },
+
+    destinationWidget: {
+        backgroundColor: "#222",
+    },
+    destinationContent: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    destinationTitle: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "white",
+    },
+    destinationSubtitle: {
+        fontSize: 14,
+        color: "white",
+    },
+
+    budgetWidget: {
+        backgroundColor: "#FFD700",
+    },
+    budgetContent: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    budgetTitle: {
+        fontSize: 14,
+        fontWeight: "bold",
+        color: "#333",
+    },
+    budgetAmount: {
+        fontSize: 20,
+        fontWeight: "bold",
+        color: "#000",
     },
     aiRecommendation: {
         flexDirection: "row",
