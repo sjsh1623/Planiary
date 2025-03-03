@@ -14,6 +14,7 @@ const initialWidgets = [
     {id: "2", type: "currency", size: "half"}, // 환율 위젯 (50% 너비)
     {id: "3", type: "destination", size: "half"}, // 목적지 위젯 (50% 너비)
     {id: "4", type: "budget", size: "half"}, // 예산 위젯 (50% 너비)
+    {id: "5", type: "timezone", size: "half"}, // ✅ Time Zone 위젯 추가
 ];
 
 const hourlyWeatherData = [
@@ -91,6 +92,24 @@ const Widget = ({type, weatherCondition}: { type: string; weatherCondition?: str
                 <Box style={[styles.widget, styles.defaultWidget]}>
                     <Text style={styles.widgetTitle}>💰 예산</Text>
                     <Text style={styles.widgetContent}>₩250,000</Text>
+                </Box>
+            );
+        case "timezone":
+            return (
+                <Box style={[styles.widget, styles.timezoneWidget]}>
+                    <HStack style={styles.timezoneRow}>
+                        <VStack>
+                            <Text style={styles.timezoneCity}>도쿄 🇯🇵</Text>
+                            <Text style={styles.timezoneTime}>오후 3:45</Text>
+                        </VStack>
+                        <VStack style={styles.timezoneGap}>
+                            <Text style={styles.timezoneDiff}>+1시간</Text>
+                        </VStack>
+                        <VStack style={styles.timezoneRight}>
+                            <Text style={styles.timezoneCity}>서울 🇰🇷</Text>
+                            <Text style={styles.timezoneTime}>오후 2:45</Text>
+                        </VStack>
+                    </HStack>
                 </Box>
             );
         default:
@@ -331,6 +350,39 @@ const styles = StyleSheet.create({
 
     currencyWidget: {
         backgroundColor: "#FFF",
+    },
+
+    // ✅ Time Zone 위젯 스타일
+    timezoneWidget: {
+        backgroundColor: "#F8F8F8",
+        padding: 20,
+    },
+    timezoneRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
+    timezoneCity: {
+        fontSize: 16,
+        fontWeight: "bold",
+        color: "#333",
+    },
+    timezoneTime: {
+        fontSize: 18,
+        fontWeight: "600",
+        color: "#000",
+        marginTop: 4,
+    },
+    timezoneGap: {
+        alignItems: "center",
+    },
+    timezoneDiff: {
+        fontSize: 14,
+        fontWeight: "bold",
+        color: "#888",
+    },
+    timezoneRight: {
+        alignItems: "flex-end",
     },
     aiRecommendation: {
         flexDirection: "row",
