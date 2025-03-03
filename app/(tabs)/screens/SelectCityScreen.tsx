@@ -10,6 +10,7 @@ import TabNavigation from "@/components/TabNavigation";
 import CityHorizontalFilter from "@/components/CityHorizontalFilter";
 import CityItem from "@/components/CityItem";
 import BottomSelection from "@/components/BottomSelection";
+import { useRouter } from "expo-router";
 import {CITY_DATA, DEFAULT_SELECTED_FILTER} from "@/app/(tabs)//constants/cityConstants";
 import {styles} from "@/app/(tabs)//styles/cityStyles";
 
@@ -18,6 +19,7 @@ import {styles} from "@/app/(tabs)//styles/cityStyles";
  * – 도시 선택 페이지로, 검색, 탭, 필터, 도시 리스트, 하단 선택 영역 등을 조합
  */
 const SelectCityScreen = () => {
+    const router = useRouter();
     const [selectedCategory, setSelectedCategory] = useState<"해외도시" | "국내도시">("해외도시");
     const [selectedFilter, setSelectedFilter] = useState<string>(DEFAULT_SELECTED_FILTER);
     const [searchText, setSearchText] = useState("");
@@ -84,6 +86,11 @@ const SelectCityScreen = () => {
             <Button
                 style={[styles.bottomButton, selectedCities.length === 0 && styles.disabledButton]}
                 isDisabled={selectedCities.length === 0}
+                onPress={() => {
+                    router.push({
+                        pathname: "/screens/SelectDateScreen",
+                    })
+                }} // ✅ 선택 완료 시 실행
             >
                 <Text style={styles.bottomButtonText}>
                     {selectedCities.length > 0

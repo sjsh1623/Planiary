@@ -11,10 +11,10 @@ import {Grid, GridItem} from "@/components/ui/grid";
 
 const initialWidgets = [
     {id: "1", type: "weather", size: "full"}, // 날씨 위젯 (100% 너비)
-    {id: "2", type: "currency", size: "half"}, // 환율 위젯 (50% 너비)
-    {id: "3", type: "destination", size: "half"}, // 목적지 위젯 (50% 너비)
-    {id: "4", type: "budget", size: "half"}, // 예산 위젯 (50% 너비)
-    {id: "5", type: "timezone", size: "half"}, // ✅ Time Zone 위젯 추가
+    {id: "2", type: "timezone", size: "full"}, // ✅ Time Zone 위젯 추가
+    {id: "3", type: "currency", size: "half"}, // 환율 위젯 (50% 너비)
+    {id: "4", type: "destination", size: "half"}, // 목적지 위젯 (50% 너비)
+    {id: "5", type: "budget", size: "half"}, // 예산 위젯 (50% 너비)
 ];
 
 const hourlyWeatherData = [
